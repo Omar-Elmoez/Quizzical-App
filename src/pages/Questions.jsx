@@ -21,13 +21,12 @@ export default function Questions() {
         let randomNum = Math.floor(Math.random() * 4);
         choices.splice(randomNum, 0, item['correct_answer']);
         
-
         return <Question content={decode(item.question)} key={nanoid()} id={nanoid()} answers={choices} />
     })
 
     return (
-        <main className="min-h-screen bg-Mirage flex justify-center items-center">
-            <div className="w-[min(90%_,_550px)] h-[550px] rounded-lg bg-introImg bg-no-repeat py-5">
+        <main className="min-h-screen bg-Mirage flex justify-center items-center py-2.5">
+            <div className="w-[min(90%_,_550px)] rounded-lg bg-slate-50 py-5 relative z-0 overflow-hidden before:content-[''] before:bg-rightShape before:absolute before:w-[127px] before:h-[127px] before:right-0 before:top-0 before:z-[-1] after:content-[''] after:bg-leftShape after:absolute after:w-[65px] after:h-[65px] after:left-0 after:bottom-0 after:z-[-1]">
                 {questions}
             </div>
         </main>

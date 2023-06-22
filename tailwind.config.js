@@ -21,6 +21,8 @@ export default {
       },
       backgroundImage: {
         'introImg': "url(/intro-page.svg)",
+        'rightShape': "url(/Right_Shape.svg)",
+        'leftShape': "url(/Left_Shape.svg)",
       }
     },
   },
