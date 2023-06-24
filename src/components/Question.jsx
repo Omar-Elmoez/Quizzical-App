@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import { nanoid } from 'nanoid';
 import Answer from './Answer';
 
 export default function Question(props) {
 
     const options = props.answers.map(item => {
-        return <Answer value={item} id={props.id} key={props.id} />
+        return <Answer value={item} id={props.id} key={nanoid()} />
     })
 
     return (
