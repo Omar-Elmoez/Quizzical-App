@@ -20,7 +20,7 @@ export default function Questions() {
         const choices = [...item['incorrect_answers']];
         let randomNum = Math.floor(Math.random() * 4);
         choices.splice(randomNum, 0, item['correct_answer']);
-        
+
         return <Question content={decode(item.question)} key={nanoid()} id={nanoid()} answers={choices} />
     })
 
