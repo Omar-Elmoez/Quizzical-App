@@ -1,11 +1,27 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import Answer from './Answer';
 
 export default function Question(props) {
 
-    const options = props.answers.map(item => {
-        return <Answer value={item} id={props.id} key={nanoid()} />
+    const [activeAnswer, setActiveAnswer] = React.useState();
+
+    function handleClick(id) {
+        setActiveAnswer(id);
+    }
+
+    const options = props.answers.map((item, index) => {
+        return (
+            <Answer 
+                key={nanoid()}
+                value={item} 
+                id={index}
+                relatedQuestion={props.id} 
+                activeAnswer={activeAnswer}
+                handleClick={handleClick}
+            />
+        )
     })
 
     return (
