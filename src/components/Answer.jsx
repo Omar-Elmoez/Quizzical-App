@@ -1,4 +1,4 @@
-// import React from 'react';
+
 import PropTypes from 'prop-types';
 import {decode} from 'html-entities';
 
@@ -6,7 +6,11 @@ import {decode} from 'html-entities';
 export default function Answer(props) {
 
     return (
-            <label className={`text-center rounded-lg p-1 w-[calc(90%_/_4)] border-Twilight border ${props.activeAnswer === props.id && "border-white bg-Geyser"} flex justify-center items-center relative`} >
+            <label 
+            className={`text-center rounded-lg p-1 w-[calc(90%_/_4)] border-Twilight border 
+            ${props.activeAnswer === props.id && "border-white bg-Geyser"} 
+            flex justify-center items-center relative`} 
+            >
                 <input 
                     type="radio" 
                     name={props.relatedQuestion}

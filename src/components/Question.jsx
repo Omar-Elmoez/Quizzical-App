@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 import Answer from './Answer';
 
+
 export default function Question(props) {
 
     const [activeAnswer, setActiveAnswer] = React.useState();
+    
 
     function handleClick(id) {
         setActiveAnswer(id);
     }
+
 
     const options = props.answers.map((item, index) => {
         return (
