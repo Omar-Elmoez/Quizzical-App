@@ -18,11 +18,15 @@ export default {
         'vistaBlue': '#94D7A2',
         'teaRose': '#F8BCBC',
         'aliceBlue': '#F5F7FB',
+        'tomato': '#ff6347',
       },
       backgroundImage: {
         'introImg': "url(/intro-page.svg)",
         'rightShape': "url(/Right_Shape.svg)",
         'leftShape': "url(/Left_Shape.svg)",
+      },
+      screens: {
+        'mx-700': {'max': '700px'}
       }
     },
   },

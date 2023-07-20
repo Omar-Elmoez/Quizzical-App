@@ -7,16 +7,18 @@ export default function Answer(props) {
 
     return (
             <label 
-            className={`text-center rounded-lg p-1 w-[calc(90%_/_4)] border-Twilight border 
-            ${props.activeAnswer === props.id && "border-white bg-Geyser"} 
+            className={`text-center rounded-lg p-1 w-[calc(90%_/_4)] mx-700:w-full border-Twilight border 
+            ${props.activeAnswer === props.index && "border-white bg-Geyser"}
+        
             flex justify-center items-center relative`} 
             >
                 <input 
                     type="radio" 
+                    checked={props.activeAnswer === props.index}
                     name={props.relatedQuestion}
                     value={decode(props.value)} 
                     className={`absolute inset-0 cursor-pointer opacity-0`} 
-                    onClick={() => props.handleClick(props.id)}
+                    onClick={props.handleClick}
                     />
                 <span className='font-Inter font-medium text-nileBlue text-sm'>{decode(props.value)}</span>
             </label>
@@ -26,8 +28,9 @@ export default function Answer(props) {
 
 Answer.propTypes = {
     value: PropTypes.string,
-    id: PropTypes.number,
+    index: PropTypes.number,
     activeAnswer: PropTypes.number,
     relatedQuestion: PropTypes.string,
     handleClick: PropTypes.func,
+    handleChange: PropTypes.func,
 }
