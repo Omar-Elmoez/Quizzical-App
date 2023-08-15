@@ -105,6 +105,7 @@ export default function Questions() {
 
       if (correct_labels.includes(allLabels[i])) {
         allLabels[i].style.backgroundColor = "#94D7A2";
+        allLabels[i].style.border = 'none';
       } else if (user_labels.includes(allLabels[i])) {
         allLabels[i].style.opacity = "0.5";
         allLabels[i].style.backgroundColor = "#F8BCBC";
